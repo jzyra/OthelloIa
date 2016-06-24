@@ -1,18 +1,18 @@
 /*!
-  * \file Options.cpp
-  * \brief This file contain functions for options and usage program.
-  * \author Jeremy ZYRA
-  * \version 1.0
+	* \file Options.cpp
+	* \brief This file contain functions for options and usage program.
+	* \author Jeremy ZYRA
+	* \version 1.0
 */
 #include "Options.hpp"
 
 /*!
-  * \brief Function for parse options.
-  Function for parse and get options.
-  * \param argc : argc param of main function.
-  * \param argv : argv pointer param of main function.
-  * \param round : pointer for indicate if human begin game.
-  * \return Return true or false if user want display help.
+	* \brief Function for parse options.
+	Function for parse and get options.
+	* \param argc : argc param of main function.
+	* \param argv : argv pointer param of main function.
+	* \param round : pointer for indicate if human begin game.
+	* \return Return true or false if user want display help.
 */
 bool get_options(const int argc, const char* argv[], bool &round) {
 	int idx_round_opt = -1;
@@ -42,9 +42,9 @@ bool get_options(const int argc, const char* argv[], bool &round) {
 }
 
 /*!
-  * \brief Function for print usage.
-  Function for print usage.
-  * \param name : name of program.
+	* \brief Function for print usage.
+	Function for print usage.
+	* \param name : name of program.
 */
 void print_help(const char *name) {
 	cout << "NAME" << endl;

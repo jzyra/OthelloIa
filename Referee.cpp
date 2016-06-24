@@ -1,15 +1,15 @@
 /*!
-  * \file Referee.cpp
-  * \brief Referee class for manage game.
-  * \author Jeremy ZYRA
-  * \version 1.0
+	* \file Referee.cpp
+	* \brief Referee class for manage game.
+	* \author Jeremy ZYRA
+	* \version 1.0
 */
 #include "Referee.hpp"
 
 /*!
-  * \brief Referee Constructor.
-  Referee class's constructor.
-  * \param round : Bool for indicate if human begin the game..
+	* \brief Referee Constructor.
+	Referee class's constructor.
+	* \param round : Bool for indicate if human begin the game..
 */
 Referee::Referee(bool round) {
 	_round = round;
@@ -17,9 +17,9 @@ Referee::Referee(bool round) {
 }
 
 /*!
-  * \brief Function for print possible moves.
-  Function for print possible moves.
-  * \param possible_moves : List of possible moves for print this.
+	* \brief Function for print possible moves.
+	Function for print possible moves.
+	* \param possible_moves : List of possible moves for print this.
 */
 void Referee::print_possible_moves(const vector<int> &possible_moves) {
 	cout << "[ ";
@@ -30,8 +30,8 @@ void Referee::print_possible_moves(const vector<int> &possible_moves) {
 }
 
 /*!
-  * \brief Function for print the score.
-  This function print the score of the IA and HUMAN player at the end of game.
+	* \brief Function for print the score.
+	This function print the score of the IA and HUMAN player at the end of game.
 */
 void Referee::print_score() {
 	int count_human = _game.count_cells_by_state(HUMAN);
@@ -56,20 +56,20 @@ void Referee::print_score() {
 }
 
 /*!
-  * \brief This function launch the game.
-  This function launch the game.
+	* \brief This function launch the game.
+	This function launch the game.
 */
 void Referee::play() {
 	_game.print_game();
 	while (!(_game.count_possible_moves(IA) == 0 && _game.count_possible_moves(HUMAN) == 0)) {
-    //If round is at true, human begin.
+		//If round is at true, human begin.
 		if (_round) {
 			vector<int> list_moves_human;
-      //If human can play.
+			//If human can play.
 			if (_game.count_possible_moves(HUMAN, &list_moves_human) > 0) {
 				int cell = -1;
 				while (_game.play(HUMAN, cell) == 0) {
-          //Human put cell id to play.
+					//Human put cell id to play.
 					cout << "Enter cell number ";
 					print_possible_moves(list_moves_human);
 					cout << " : ";
@@ -80,10 +80,10 @@ void Referee::play() {
 			} 
 		} else {
 			vector<int> list_moves_ia;
-      //If IA can play.
+			//If IA can play.
 			if (_game.count_possible_moves(IA, &list_moves_ia) > 0) {
 				Ia ia = Ia(_game, IA);
-        //Generate IA move.
+				//Generate IA move.
 				int ia_pos = ia.play();
 				_game.play(IA, ia_pos);
 				cout << "IA play in : " << ia_pos << endl << endl;
@@ -92,6 +92,6 @@ void Referee::play() {
 		}
 		_round = !_round;
 	}
-  //Print score at the end of game.
+	//Print score at the end of game.
 	print_score();
 }
