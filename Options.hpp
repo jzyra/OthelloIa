@@ -1,8 +1,8 @@
 /*!
-  * \file Options.hpp
-  * \brief This file contain headers functions for options and usage program.
-  * \author Jeremy ZYRA
-  * \version 1.0
+	* \file Options.hpp
+	* \brief This file contain headers functions for options and usage program.
+	* \author Jeremy ZYRA
+	* \version 1.0
 */
 #ifndef OPTIONS_H
 #define OPTIONS_H

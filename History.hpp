@@ -1,8 +1,8 @@
 /*!
-  * \file History.hpp
-  * \brief Class header for represent the game with history of returned pieces by depth.
-  * \author Jeremy ZYRA
-  * \version 1.0
+	* \file History.hpp
+	* \brief Class header for represent the game with history of returned pieces by depth.
+	* \author Jeremy ZYRA
+	* \version 1.0
 */
 #ifndef HISTORY_H
 #define HISTORY_H

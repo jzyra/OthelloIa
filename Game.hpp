@@ -1,8 +1,8 @@
 /*!
-  * \file Game.hpp
-  * \brief Class header for represent Othello game.
-  * \author Jeremy ZYRA
-  * \version 1.0
+	* \file Game.hpp
+	* \brief Class header for represent Othello game.
+	* \author Jeremy ZYRA
+	* \version 1.0
 */
 #ifndef GAME_H
 #define GAME_H

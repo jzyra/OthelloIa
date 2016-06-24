@@ -1,8 +1,8 @@
 /*!
-  * \file Referee.hpp
-  * \brief Referee class header for manage game.
-  * \author Jeremy ZYRA
-  * \version 1.0
+	* \file Referee.hpp
+	* \brief Referee class header for manage game.
+	* \author Jeremy ZYRA
+	* \version 1.0
 */
 #ifndef REFEREE_H
 #define REFEREE_H
